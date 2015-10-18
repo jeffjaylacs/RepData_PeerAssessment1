@@ -90,6 +90,9 @@ MaxInterval[, c(1:1)]
 * As seen from the calculations above, the 5 minute interval with the max number of steps is 835
     
 ## Imputing missing values
+* Strategy for imputing missing values:  
+    + Replace any NA value with the average step count for that same interval across all days.  
+    + For example if the 630 interval for day 1 contains NA, but the average value for the 630 interval across all other days is 100, replace NA with 100.
 
 ```r
 ## Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)

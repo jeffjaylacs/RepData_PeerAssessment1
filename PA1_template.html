@@ -283,6 +283,15 @@ MaxInterval[, c(1:1)]
 
 <h2>Imputing missing values</h2>
 
+<ul>
+<li>Strategy for imputing missing values:<br/>
+
+<ul>
+<li>Replace any NA value with the average step count for that same interval across all days.<br/></li>
+<li>For example if the 630 interval for day 1 contains NA, but the average value for the 630 interval across all other days is 100, replace NA with 100.</li>
+</ul></li>
+</ul>
+
 <pre><code class="r">## Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 sum(is.na(rawdata$steps))
 </code></pre>
